@@ -1,0 +1,110 @@
+.contactpage-parent {
+    min-height: 100vh;
+    padding: 3% 5% 0 5%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+}
+
+.contactpage-header {
+
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(125, 125, 125);
+
+
+}
+
+.contactpage-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+    gap: 2rem;
+    padding: 1%;
+
+}
+
+.contactpage-image {
+
+    flex: 1 1 48%;
+    /* flexibel, min. ca. halbe Breite */
+    box-sizing: border-box;
+
+}
+
+.contactpage-image img {
+
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.contactpage-text {
+    flex: 1 1 38%;
+    /* flexibel, min. ca. halbe Breite */
+    box-sizing: border-box;
+    height: auto;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 65%;
+    color: black;
+    background-color: rgba(235, 235, 235, 0.546);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* [x-verschiebung] [y-verschiebung] [blur-radius] [spread-radius] [farbe];*/
+    padding: 30px;
+
+}
+
+.contactpage-container h1,
+.contactpage-container p,
+.contactpage-container a {
+
+    margin-bottom: 1rem;
+
+    z-index: 1;
+    /* Stellt sicher, dass Text über dem Bild bleibt */
+}
+
+
+
+@media (max-width: 768px) {
+
+    .contactpage-parent {
+
+        padding: 15% 5% 0 5%;
+
+
+    }
+
+    .contactpage-image {
+        flex: 1 1 100%;
+        /* ganze Breite */
+    }
+
+
+
+    .contactpage-container h1,
+    .contactpage-container p,
+    .contactpage-container a {
+        position: relative;
+        z-index: 1;
+        /* Stellt sicher, dass Text über dem Bild bleibt */
+    }
+
+    .contactpage-text {
+        flex: 1 1 100%;
+        /* ganze Breite */
+    }
+}

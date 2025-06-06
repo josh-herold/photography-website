@@ -1,0 +1,34 @@
+/* Header.css */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}

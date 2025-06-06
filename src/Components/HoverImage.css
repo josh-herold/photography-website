@@ -1,0 +1,93 @@
+.hover-wrapper {
+
+  position: relative;
+}
+
+.hover-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+}
+
+.hover-container img {
+  width: 100%;
+  height: 100%;
+  /* neu */
+  object-fit: cover;
+  /* sehr wichtig für gleichmäßige Skalierung */
+  display: block;
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (max-width: 1024px) {
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 2.6rem;
+    font-weight: bold;
+
+    opacity: 1 !important;
+    pointer-events: none;
+    z-index: 10;
+  }
+}
+@media (max-width: 720px) {
+  .hover-overlay {
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 1440px) {
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 2.6rem;
+    font-weight: bold;
+
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+  }
+}

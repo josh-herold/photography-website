@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.berlin-head {
+    top: 0;
+
+}
+
+.berlin-uber {
+    font-weight: 800;
+    font-size: 50px;
+    color: black;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.page-transition {
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+@media (max-width: 720px) {
+    .page-transition {
+        transition: opacity 0.8s ease-in-out;
+        transform: none;
+        /* Entfernt das vertikale Verschieben */
+    }
+}
+
+.berlin-gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 24px 0 5rem 0;
+}
+
+.berlin-gallery-item {
+    height: 400px;
+    width: auto;
+    max-height: 400px;
+
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+/* Hochkantbilder werden innen kleiner skaliert, damit die Höhe stimmt */
+.gallery-item.portrait {
+    object-fit: contain;
+    /* Skaliert innerhalb der Höhe */
+
+}
+
+
+/* Lightbox Overlay */
+.berlin-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+
+}
+
+/* Lightbox Inhalt */
+.berlin-lightbox-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.berlin-lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+
+
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.berlin-close-btn {
+    color: #515151d3;
+    position: fixed;
+    display: flex;
+    font-size: 3rem;
+    font-weight: 600;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    top: 20px;
+    left: 40px;
+}
+
+.prev-btn {
+    left: -60px;
+
+}
+
+.next-btn {
+    right: -60px;
+}
+
+@media (max-width: 768px) {
+
+
+
+    .berlin-uber {
+        font-weight: 800;
+        font-size: 2.6rem;
+        color: black;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .page-transition {
+        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    }
+
+
+
+    .berlin-gallery-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px 1px 5rem 1px;
+    }
+
+    .berlin-gallery-item {
+        height: auto;
+        width: 100%;
+        max-height: 400px;
+
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        display: block;
+    }
+
+    .gallery-item.portrait {
+
+        grid-row: span 2 !important;
+        height: 100%;
+        object-fit: contain;
+
+    }
+
+    .lazy-load-image-background.portrait {
+        grid-row-end: span 2 !important;
+    }
+
+
+    .footer {
+        display: none !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        gap: 2px !important;
+        padding: 10px 10px;
+
+
+    }
+
+    .footer a {
+        color: rgb(255, 255, 255);
+        font-size: 36px;
+        font-weight: 200;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .footer a:hover {
+        color: rgb(203, 60, 232);
+
+        text-decoration: none;
+    }
+}

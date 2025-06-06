@@ -1,0 +1,110 @@
+.blogpage-parent {
+    margin: 0 auto;
+    min-height: 100vh;
+    padding: 100px 5% 0 5%;
+    color: rgb(255, 255, 255);
+
+}
+
+.blogpage-header {
+
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: rgb(125, 125, 125);
+
+
+}
+
+.blogpage-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    text-align: center;
+    overflow: hidden;
+    align-items: center;
+    gap: 5%;
+    padding: 10px 1% 5% 1%;
+    background-color: rgb(255, 247, 236);
+    border-radius: 10px;
+
+}
+
+.blogpage-image {
+
+    flex: 1 1 45%;
+    box-sizing: border-box;
+
+}
+
+.blogpage-image img {
+
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+
+}
+
+.blogpage-image1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.blogpage-text {
+    flex: 1 1 45%;
+    font-size: 1.2rem;
+    text-align: left;
+
+    color: black;
+    padding: 30px;
+
+}
+
+.blogpage-container h1,
+.blogpage-container p,
+.blogpage-container a {
+    position: relative;
+    margin-bottom: 1rem;
+
+    z-index: 1;
+    /* Stellt sicher, dass Text über dem Bild bleibt */
+}
+
+@media (max-width: 1090px) {
+    .blogpage-parent {
+
+        padding: 100px 2% 0 2%;
+        color: rgb(255, 255, 255);
+
+    }
+
+
+
+    .blogpage-image {
+        flex: 1 1 100%;
+        /* ganze Breite */
+    }
+
+
+
+    .blogpage-container h1,
+    .blogpage-container p,
+    .blogpage-container a {
+        position: relative;
+        z-index: 1;
+        /* Stellt sicher, dass Text über dem Bild bleibt */
+    }
+
+    .blogpage-text {
+        flex: 1 1 100%;
+        /* ganze Breite */
+    }
+}

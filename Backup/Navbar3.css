@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300400;500;600;700&display=swap');
+
+.navbar-container {
+
+    background-color: gold;
+    /* Halbtransparent */
+    display: flex;
+    align-items: center;
+    /* Zentriert den Inhalt vertikal */
+    justify-content: space-between;
+    /* Verteilung zwischen Logo und Links */
+    padding: 0 5%;
+    /* Padding für besseren Abstand */
+
+    /* Feste Höhe für die Navbar */
+    width: 100%;
+    /* Nimmt die volle Breite des Containers ein */
+    z-index: 1004;
+    /* Stellt sicher, dass die Navbar oben bleibt */
+    margin: 0 auto;
+    /* Zentriert die Navbar horizontal */
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+
+}
+
+
+.logo-container {
+
+
+    cursor: pointer;
+
+    height: auto;
+
+
+
+}
+
+
+
+.vorname a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 2.5rem !important;
+    font-weight: 200;
+    letter-spacing: -1px !important;
+    text-align: left;
+
+}
+
+.nachname a {
+    text-decoration: none;
+    color: #5c5c5c;
+    font-size: 3rem;
+    /* Größer als der Vorname */
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding-left: 70px;
+}
+
+.button-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    height: 50px;
+
+
+}
+
+.insta-link {
+    height: 20px;
+    width: 20px;
+
+
+}
+
+.insta-icon {
+    height: 20px;
+    width: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.insta-icon:hover {
+    transform: scale(1.2);
+}
+
+.menue-secondary {
+    border-top: solid 1px rgb(190, 188, 188);
+    padding-top: 18px;
+
+
+}
+
+
+
+/*--------------------Burger-Menue----------------------*/
+
+/* Styles für den Burger-Button */
+.burger-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+/* Styles für den Burger-Button */
+.bm-burger-button {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 20px;
+
+
+
+}
+
+/* Die Bar-Farben */
+.bm-burger-bars {
+    width: 30px;
+    background: #726565;
+    transition: 0.2s ease-in-out;
+}
+
+.white-icon .bm-burger-bars {
+    background: #ffffff70;
+    /* Farbe beim Scrollen */
+}
+
+/* Menü-Styles */
+
+
+/* Menü selbst (Innenbereich) */
+@keyframes fadeInMenu {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.bm-menu {
+    background: rgb(248, 118, 118);
+    font-size: 1.3rem;
+    font-weight: 300;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center !important;
+    border-radius: 8px 0 0 8px;
+    padding: 20px;
+    width: 160px !important;
+    min-height: 200px !important;
+    height: auto !important;
+    position: fixed !important;
+    top: 50% !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+
+}
+
+
+
+.bm-menu-wrap {
+
+    position: fixed;
+    height: 100vh !important;
+    width: 240px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+    background-color: rgba(25, 24, 51, 0.329) !important;
+}
+
+.burger-menu {
+    height: 100%;
+    width: 30px !important;
+}
+
+.bm-overlay {
+    display: none;
+    height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    top: 0 !important;
+}
+
+/* Menüpunkt-Liste */
+.bm-item-list {
+    color: #c0b42a;
+    text-align: center;
+    /* Zentriert die Textinhalte */
+    width: 100%;
+}
+
+/* Menüpunkt Styling */
+.bm-item {
+    display: flex !important;
+    flex-direction: column !important;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: .3s ease-in-out;
+    text-align: left !important;
+    width: 100%;
+    cursor: pointer;
+    /* Volle Breite für bessere Sichtbarkeit */
+}
+
+/* Hover-Effekt */
+.bm-item:hover {
+    color: #3992a1;
+}
+
+/* Menü-Reiter für das Öffnen des Menüs */
+.menu-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: rgb(237, 142, 142) !important;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.menu-tab:hover {
+    background: rgb(255, 105, 105) !important;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.224);
+        /* Halbtransparent */
+        display: flex;
+        align-items: center;
+        /* Zentriert den Inhalt vertikal */
+        justify-content: space-between;
+        /* Verteilung zwischen Logo und Links */
+        padding: 4px 20px;
+        /* Padding für besseren Abstand */
+        height: auto;
+        /* Feste Höhe für die Navbar */
+        max-width: 1920px;
+        /* Maximalbreite */
+        width: 100%;
+        /* Nimmt die volle Breite des Containers ein */
+        z-index: 1000;
+        /* Stellt sicher, dass die Navbar oben bleibt */
+        margin: 0 auto;
+        /* Zentriert die Navbar horizontal */
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+        padding-left: 1px;
+        gap: 6px;
+
+    }
+
+
+
+    .vorname a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: left;
+
+
+        /* Logo-Text etwas größer */
+    }
+
+    .nachname a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        padding-left: 0px;
+
+    }
+
+    .button-container {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+
+
+    }
+
+}
+
+@media (max-width: 576px) {}

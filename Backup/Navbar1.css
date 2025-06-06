@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300400;500;600;700&display=swap');
+
+.navbar-container {
+    position: fixed;
+    top: 0;
+    background: transparent;
+    /* Halbtransparent */
+    display: flex;
+    align-items: center;
+    /* Zentriert den Inhalt vertikal */
+    justify-content: space-between;
+    /* Verteilung zwischen Logo und Links */
+    padding: 10px 20px;
+    /* Padding für besseren Abstand */
+    height: auto;
+    /* Feste Höhe für die Navbar */
+    width: 100%;
+    /* Nimmt die volle Breite des Containers ein */
+    z-index: 1000;
+    /* Stellt sicher, dass die Navbar oben bleibt */
+    margin: 0 auto;
+    /* Zentriert die Navbar horizontal */
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.navbar-container.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Horizontale Zentrierung */
+    line-height: 30px;
+    cursor: pointer;
+    padding-left: 6px;
+
+}
+
+
+
+.vorname a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: left;
+
+
+    /* Logo-Text etwas größer */
+}
+
+.nachname a {
+    text-decoration: none;
+    color: #5c5c5c;
+    font-size: 3rem;
+    /* Größer als der Vorname */
+    font-weight: 200;
+    letter-spacing: 2px;
+    padding-left: 70px;
+}
+
+.button-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    margin-top: -40px;
+    height: 50px;
+
+
+}
+
+.insta-link {
+    height: 20px;
+    width: 20px;
+
+
+}
+
+.insta-icon {
+    height: 20px;
+    width: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.insta-icon:hover {
+    transform: scale(1.2);
+}
+
+.menue-secondary {
+    border-top: solid 1px rgb(190, 188, 188);
+    padding-top: 18px;
+
+
+}
+
+
+
+/*--------------------Burger-Menue----------------------*/
+
+/* Styles für den Burger-Button */
+.burger-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+/* Styles für den Burger-Button */
+.bm-burger-button {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 20px;
+
+
+
+}
+
+/* Die Bar-Farben */
+.bm-burger-bars {
+    width: 30px;
+    background: #726565;
+    transition: 0.2s ease-in-out;
+}
+
+.white-icon .bm-burger-bars {
+    background: #ffffff70;
+    /* Farbe beim Scrollen */
+}
+
+/* Menü-Styles */
+/* Menü-Container anpassen */
+
+
+/* Menü selbst (Innenbereich) */
+.bm-menu {
+    background: #984b95;
+
+    font-size: 1.15em;
+    font-weight: 300;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+    /* Menüpunkte in der Mitte zentrieren */
+    justify-content: center !important;
+    /* Vertikale Zentrierung */
+    border-radius: 8px 0 0 8px;
+    padding: 20px;
+    width: 250px !important;
+    /* Feste Breite */
+    min-height: 200px !important;
+    /* Mindesthöhe, damit Inhalte sichtbar bleiben */
+    height: auto !important;
+    /* Dynamische Höhe */
+    position: fixed !important;
+    /* Fixierte Position */
+    top: 50% !important;
+    /* In der Mitte des Viewports */
+    right: 0 !important;
+    /* Am rechten Rand der Seite */
+    transform: translateY(-50%) !important;
+    /* Perfekte vertikale Zentrierung */
+}
+
+.bm-menu-wrap {
+
+    position: relative;
+
+    background-color: #c0642a;
+    width: 250px !important;
+    height: 100% !important;
+    box-sizing: content-box;
+
+}
+
+/* Menüpunkt-Liste */
+.bm-item-list {
+    color: #c0b42a;
+    text-align: center;
+    /* Zentriert die Textinhalte */
+    width: 100%;
+}
+
+/* Menüpunkt Styling */
+.bm-item {
+    display: flex !important;
+    flex-direction: column !important;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    transition: .3s ease-in-out;
+    text-align: left !important;
+    width: 100%;
+    cursor: pointer;
+    /* Volle Breite für bessere Sichtbarkeit */
+}
+
+/* Hover-Effekt */
+.bm-item:hover {
+    color: #ff8251;
+}
+
+/* Menü-Reiter für das Öffnen des Menüs */
+.menu-tab {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px 0 0 5px;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.menu-tab:hover {
+    background: #555;
+}
+
+@media (max-width: 768px) {
+
+    .navbar-container {
+        position: fixed;
+        top: 0;
+        background: rgba(0, 0, 0, 0.224);
+        /* Halbtransparent */
+        display: flex;
+        align-items: center;
+        /* Zentriert den Inhalt vertikal */
+        justify-content: space-between;
+        /* Verteilung zwischen Logo und Links */
+        padding: 4px 20px;
+        /* Padding für besseren Abstand */
+        height: auto;
+        /* Feste Höhe für die Navbar */
+        max-width: 1920px;
+        /* Maximalbreite */
+        width: 100%;
+        /* Nimmt die volle Breite des Containers ein */
+        z-index: 1000;
+        /* Stellt sicher, dass die Navbar oben bleibt */
+        margin: 0 auto;
+        /* Zentriert die Navbar horizontal */
+        transition: 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+        padding-left: 1px;
+        gap: 6px;
+
+    }
+
+
+
+    .vorname a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        text-align: left;
+
+
+        /* Logo-Text etwas größer */
+    }
+
+    .nachname a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 200;
+        letter-spacing: 2px;
+        padding-left: 0px;
+
+    }
+
+    .button-container {
+        display: flex;
+        gap: 34px;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+
+
+
+    }
+
+}
+
+@media (max-width: 576px) {}

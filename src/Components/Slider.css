@@ -1,0 +1,45 @@
+.slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.slider-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 60vw;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}

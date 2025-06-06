@@ -1,0 +1,101 @@
+/********* BERLIN ************/
+
+.portfolio {
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+
+}
+
+.portfolio h1 {
+    color: black;
+    font-weight: 200;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 3 Spalten mit gleicher Breite */
+    gap: 10px;
+    padding: 30px 2% 0 2%;
+
+
+}
+
+.image {
+
+    width: 100%;
+    /* Breite des Containers übernehmen */
+    height: 75vh;
+    /* Eine feste Höhe für die Bilder */
+    overflow: hidden;
+    /* Verhindert, dass Bilder außerhalb des Containers überlaufen */
+
+    position: relative;
+
+
+}
+
+
+.image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* 3 Spalten mit gleicher Breite */
+
+
+
+    }
+
+    .image {
+
+        width: 100%;
+        /* Breite des Containers übernehmen */
+        height: 75vh;
+        /* Eine feste Höhe für die Bilder */
+        overflow: hidden;
+        /* Verhindert, dass Bilder außerhalb des Containers überlaufen */
+
+        position: relative;
+
+
+    }
+}
+@media (max-width: 768px) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* 3 Spalten mit gleicher Breite */
+
+
+
+    }
+
+    .image {
+
+        width: 100%;
+        /* Breite des Containers übernehmen */
+        height: 75vh;
+        /* Eine feste Höhe für die Bilder */
+        overflow: hidden;
+        /* Verhindert, dass Bilder außerhalb des Containers überlaufen */
+
+        position: relative;
+
+
+    }
+}

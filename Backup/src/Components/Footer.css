@@ -1,0 +1,30 @@
+.footer {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 2%;
+    background-color: rgb(210, 210, 210);
+}
+
+
+
+.letter {
+    font-size: 12rem;
+    /* Normale Schriftgröße */
+}
+
+.small {
+    font-size: 5rem;
+    /* Kleinere Schriftgröße für "me" */
+}
+
+
+
+.footer-text {
+    font-size: 1.1rem;
+
+}
+

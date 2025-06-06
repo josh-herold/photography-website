@@ -1,0 +1,81 @@
+/********* BERLIN ************/
+
+.berlin {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 50px 6% 20px 10%;
+
+}
+
+.berlin-image {
+    background-color: rgb(255, 255, 255);
+    height: 605px;
+    width: 900px;
+
+}
+
+.berlin-text {
+    justify-content: center;
+    width: 300px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding-top: 70px;
+    padding-right: 20px;
+}
+
+.berlin-text a {
+    text-decoration: none;
+    color: rgb(230, 146, 247);
+    transition: 0.3s ease-in-out;
+}
+
+.berlin-text a:hover {
+    text-decoration: none;
+    color: rgb(203, 60, 232);
+}
+
+@media (max-width: 768px) {
+    .berlin {
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 10px 1% 20px 1%;
+
+    }
+
+    .berlin-image {
+        background: url("https://www.janoschherold.de/photography/auto.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 605px;
+        width: 900px;
+
+    }
+
+    .berlin-text {
+        justify-content: center;
+        width: 100%;
+        color: #ffffff;
+        font-size: 1.2rem;
+    }
+
+    .berlin-text a {
+        text-decoration: none;
+        color: rgb(230, 146, 247);
+        transition: 0.3s ease-in-out;
+    }
+
+    .berlin-text a:hover {
+        text-decoration: none;
+        color: rgb(203, 60, 232);
+    }
+}

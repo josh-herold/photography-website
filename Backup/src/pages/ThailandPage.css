@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+.uber {
+    font-weight: 800;
+    font-size: 50px;
+    color: black;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 24px 0 5rem 0;
+}
+
+.gallery-item {
+    height: 400px;
+    width: auto;
+    max-height: 400px;
+
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: block;
+}
+
+/* Hochkantbilder werden innen kleiner skaliert, damit die Höhe stimmt */
+.gallery-item.portrait {
+    object-fit: contain;
+    /* Skaliert innerhalb der Höhe */
+
+}
+
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 10px;
+    background-color: rgb(227, 192, 198);
+
+
+}
+
+.footer-links a {
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    color: #0d0c1d;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s linear;
+}
+
+.footer-links a:hover {
+    color: rgb(203, 60, 232);
+
+    text-decoration: none;
+}
+
+
+
+/* Lightbox Overlay */
+.tanzania-lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(250, 250, 250, 1);
+    border-width: 2px;
+    border-style: dotted;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+/* Lightbox Inhalt */
+.lightbox-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-image {
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: 10px;
+
+}
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.tanzania-close-btn {
+    color: #515151d3;
+    position: fixed;
+    display: flex;
+    font-size: 3rem;
+    font-weight: 600;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    top: 20px;
+    left: 40px;
+}
+
+.prev-btn {
+    left: -60px;
+
+}
+
+.next-btn {
+    right: -60px;
+}
+
+@media (max-width: 768px) {
+    .thailand-head {
+        font-weight: 800;
+        font-size: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+        grid-auto-rows: 100% !important;
+        gap: 10px !important;
+        padding: 10px 5px !important;
+        overflow: hidden;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Passt Bilder an, ohne Verzerrung */
+        transition: 0.6s ease-in-out;
+
+    }
+
+    .gallery-item.portrait {
+
+        grid-row: span 2 !important;
+        height: 100%;
+        object-fit: contain;
+
+    }
+
+    .lazy-load-image-background.portrait {
+        grid-row-end: span 2 !important;
+    }
+
+
+    .footer {
+        display: none !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        gap: 2px !important;
+        padding: 10px 10px;
+
+
+    }
+
+    .footer a {
+        color: rgb(255, 255, 255);
+        font-size: 36px;
+        font-weight: 200;
+        text-decoration: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .footer a:hover {
+        color: rgb(203, 60, 232);
+
+        text-decoration: none;
+    }
+}
