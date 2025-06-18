@@ -116,11 +116,11 @@ const Menue = ({ open, setOpen }) => {
         <a onClick={() => handleClick('/', true)}>Home</a>
       </div>
       <div className="menu-group">
-        <a onClick={() => handleClick('/about', true)}>About Me</a>
+        <a onClick={() => handleClick('/about', true)}>About</a>
       </div>
       <div className="menu-group">
 
-        <a onClick={() => setSubmenuOpen(!submenuOpen)}>Portfolio {submenuOpen ? '▲' : '▼'}</a>
+        <a onClick={() => setSubmenuOpen(!submenuOpen)}>Work {submenuOpen ? '▲' : '▼'}</a>
         <div className={`submenu-wrapper ${submenuOpen ? 'open' : ''}`}>
           <a onClick={() => handleClick('/berlin', true)}>Berlin</a>
           <a onClick={() => handleClick('/tanzania', true)}>Tanzania</a>

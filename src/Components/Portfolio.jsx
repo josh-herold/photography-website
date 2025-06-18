@@ -30,7 +30,7 @@ function Portfolio() {
   return (
     <div className="portfolio" id="portfolio">
       <div className="portfolio-text">
-        <AnimatedText text='portfolio' />
+        <AnimatedText text='work' />
       </div>
 
       <motion.div

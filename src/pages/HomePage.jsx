@@ -1,7 +1,6 @@
 import { React, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Components/Header';
-import About from '../Components/About';
 import Portfolio from '../Components/Portfolio';
 import './HomePage.css'
 
@@ -30,7 +29,6 @@ const HomePage = () => {
         >
             <div>
                 <Header />
-                <About />
                 <Portfolio />
 
             </div>

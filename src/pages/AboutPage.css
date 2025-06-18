@@ -1,104 +1,100 @@
-.aboutpage-parent {
+.about {
     min-height: 100vh;
-    padding: 100px 5% 0 5%;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-
-}
-
-.aboutpage-header {
-
-    font-size: 2.5rem;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: rgb(125, 125, 125);
-
-
-}
-
-.aboutpage-container {
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    overflow: hidden;
-
-    gap: 2rem;
-    padding: 1%;
-
+    gap: 5%;
+    padding: 130px 2%;
+    background-color: rgb(0, 0, 0);
 }
 
-.aboutpage-image {
-
-    flex: 1 1 48%;
-    /* flexibel, min. ca. halbe Breite */
-    box-sizing: border-box;
-
-}
-
-.aboutpage-image img {
-
-    width: 100%;
-    height: auto;
-    display: block;
-
-}
-
-.aboutpage-text {
-    flex: 1 1 48%;
-    /* flexibel, min. ca. halbe Breite */
-    box-sizing: border-box;
-    height: auto;
-    font-size: 1.2rem;
+.about-header {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0px;
+    line-height: 0.72;
     text-align: left;
-    width: 65%;
-    color: black;
-    background-color: rgba(255, 244, 246, 0.546);
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-    /* [x-verschiebung] [y-verschiebung] [blur-radius] [spread-radius] [farbe];*/
-    padding: 30px;
 
 }
 
-.aboutpage-container h1,
-.aboutpage-container p,
-.aboutpage-container a {
-
-    margin-bottom: 1rem;
-
-    z-index: 1;
-    /* Stellt sicher, dass Text über dem Bild bleibt */
+.letter {
+    font-size: 12rem;
+    /* Normale Schriftgröße */
 }
 
+.small {
+    font-size: 5rem;
+    /* Kleinere Schriftgröße für "me" */
+}
 
+.about-image {
+    background-image: url("/images/profil.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    min-height: 400px;
+    width: 400px;
+}
+
+.about-text {
+    font-size: 1.5rem;
+    width: 38%;
+    padding: 0 5px;
+
+}
+
+.about-text a {
+    font-size: 1.5rem;
+    color: blueviolet;
+    text-decoration: none;
+}
 
 @media (max-width: 768px) {
+    .about {
+        min-height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
 
-
-    .aboutpage-image {
-        flex: 1 1 100%;
-        /* ganze Breite */
     }
 
+    .about-header {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        gap: 0px;
+        line-height: 0.7;
+        text-align: center;
 
-
-    .aboutpage-container h1,
-    .aboutpage-container p,
-    .aboutpage-container a {
-        position: relative;
-        z-index: 1;
-        /* Stellt sicher, dass Text über dem Bild bleibt */
     }
 
-    .aboutpage-text {
-        flex: 1 1 100%;
-        /* ganze Breite */
+    .letter {
+        font-size: 8rem !important;
+        /* Normale Schriftgröße */
+    }
+
+    .small {
+        font-size: 3.5rem !important;
+        /* Kleinere Schriftgröße für "me" */
+    }
+
+    .about-image {
+        background-image: url("/images/profil.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        height: 320px;
+        width: 320px;
+    }
+
+    .about-text {
+        font-size: 1.4rem;
+        width: 100%;
+        padding: 1px 3px;
+        text-align: left;
+        padding: 0 10px;
     }
 }
